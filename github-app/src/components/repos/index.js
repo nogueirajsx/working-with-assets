@@ -4,7 +4,7 @@ import React from 'react'
 import './repos.css'
 
 const Repos = ({className, title, repos}) =>(
-    <div className={className}>
+    <div className={`repos-list ${className}`}>
       <h2>{title}</h2>
       <ul>
         {repos.map((repo, index)=>(
@@ -17,7 +17,8 @@ const Repos = ({className, title, repos}) =>(
 )
 
 Repos.defaultprops = {
-    className: ''
+    className: '',
+    repos: []
 }
 
 Repos.propTypes = {
